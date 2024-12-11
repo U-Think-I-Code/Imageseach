@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.search-area {
+  background-image: url("./img/bg.jpg");
+  width: 100%;
+  height: 500px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.black {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+}
+.container {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.container h1 {
+  font-size: 4vw;
+}
+.container p {
+  font-size: 2.3vw;
+}
+
+.search-box {
+  width: 60%;
+  height: 10%;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+}
+.search-box input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.btn {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 10px;
+}
+
+.btn button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(80, 78, 224);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn button:hover {
+  background-color: rgba(80, 78, 224, 0.801);
+}
+.image-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.image-gallery .images {
+  columns: 5 350px;
+  max-width: 95%;
+  margin-top: 20px;
+}
+.image {
+  overflow: hidden;
+  margin-bottom: 10px;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+.photo {
+  width: 100%;
+  transition: all 0.5s;
+}
+.photo:hover {
+  scale: 110%;
+}
+
+.image .details {
+  position: absolute;
+  bottom: -100;
+  height: 20%;
+  width: 100%;
+  background: linear-gradient(to top, black, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.image:hover .details {
+  bottom: 0;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.download img {
+  padding: 8px;
+  background-color: rgb(80, 78, 224);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.download img:hover {
+  background-color: rgba(80, 78, 224, 0.801);
+}
+#load {
+  width: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(80, 78, 224);
+  border: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+}
+#load:hover {
+  background-color: rgba(80, 78, 224, 0.801);
+}
+
+@media (max-width: 800px) {
+  .container h1 {
+    font-size: 5vw;
+  }
+  .search-area {
+    height: 400px;
+  }
+  .container p {
+    color: white;
+    font-size: 3.32vw;
+  }
+  .search-box {
+    width: 80%;
+    height: 10%;
+  }
+  .btn button {
+    width: 35px;
+    height: 35px;
+  }
+  .btn button img {
+    width: 20px;
+  }
+}
